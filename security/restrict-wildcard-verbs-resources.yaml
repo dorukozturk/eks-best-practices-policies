@@ -1,17 +1,8 @@
+# https://aws.github.io/aws-eks-best-practices/security/docs/iam/#employ-least-privileged-access-when-creating-rolebindings-and-clusterrolebindings
 apiVersion: kyverno.io/v1
 kind: ClusterPolicy
 metadata:
-  name: restrict-wildcard-verbs
-  annotations:
-    policies.kyverno.io/title: Restrict Wildcard in Verbs and Resources
-    policies.kyverno.io/category: Security
-    policies.kyverno.io/severity: medium
-    policies.kyverno.io/subject: Role, ClusterRole, RBAC
-    kyverno.io/kyverno-version: 1.6.2
-    policies.kyverno.io/minversion: 1.6.0
-    kyverno.io/kubernetes-version: "1.21"
-    policies.kyverno.io/description: >-
-      https://aws.github.io/aws-eks-best-practices/security/docs/iam/#employ-least-privileged-access-when-creating-rolebindings-and-clusterrolebindings     
+  name: restrict-wildcard-verbs-resources
 spec:
   validationFailureAction: audit
   background: true
