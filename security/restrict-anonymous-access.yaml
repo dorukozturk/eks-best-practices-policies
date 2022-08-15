@@ -1,0 +1,47 @@
+# https://aws.github.io/aws-eks-best-practices/security/docs/iam/#review-and-revoke-unnecessary-anonymous-access
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: restrict-anonymous-access
+spec:
+  validationFailureAction: audit
+  background: true
+  rules:
+    - name: unauthenticated-access
+      match:
+        any:
+        - resources:
+            kinds:
+              - RoleBinding
+              - ClusterRoleBinding
+      exclude:
+        resources:
+          kinds:
+          - RoleBinding
+          - ClusterRoleBinding
+          namespaces:
+          - kube-system
+      validate:
+        message: "Don't bind roles or clusterroles to system:unauthenticated group."
+        pattern:
+          subjects:
+            name: "!system:unauthenticated"
+    - name: anonymous-access
+      match:
+        any:
+        - resources:
+            kinds:
+              - RoleBinding
+              - ClusterRoleBinding
+      exclude:
+        resources:
+          kinds:
+          - RoleBinding
+          - ClusterRoleBinding
+          namespaces:
+          - kube-system
+      validate:
+        message: "Don't bind roles or clusterroles to system:anonymous group."
+        pattern:
+          subjects:
+            name: "!system:anonymous"
