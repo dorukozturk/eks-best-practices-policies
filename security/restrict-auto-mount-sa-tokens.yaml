@@ -11,6 +11,12 @@ spec:
       resources:
         kinds:
         - Pod
+    exclude:
+      resources:
+        kinds:
+        - Pod
+        namespaces:
+        - kube-system
     preconditions:
       all:
       - key: "{{ request.\"object\".metadata.labels.\"app.kubernetes.io/part-of\" || '' }}"
