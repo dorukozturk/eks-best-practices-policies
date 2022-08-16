@@ -1,0 +1,21 @@
+# https://aws.github.io/aws-eks-best-practices/security/docs/pods/#configure-your-images-with-read-only-root-file-system
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: require-ro-rootfs    
+spec:
+  validationFailureAction: audit
+  background: true
+  rules:
+  - name: validate-readOnlyRootFilesystem
+    match:
+      resources:
+        kinds:
+        - Pod
+    validate:
+      message: "Root filesystem must be read-only."
+      pattern:
+        spec:
+          containers:
+          - securityContext:
+              readOnlyRootFilesystem: true
