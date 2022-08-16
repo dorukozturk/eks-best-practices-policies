@@ -1,3 +1,4 @@
+# https://aws.github.io/aws-eks-best-practices/security/docs/pods/#never-run-docker-in-docker-or-mount-the-socket-in-the-container
 apiVersion: kyverno.io/v1
 kind: ClusterPolicy
 metadata:
