@@ -1,4 +1,3 @@
-# https://aws.github.io/aws-eks-best-practices/security/docs/pods/#restrict-the-use-of-hostpath-or-if-hostpath-is-necessary-restrict-which-prefixes-can-be-used-and-configure-the-volume-as-read-only
 apiVersion: v1
 kind: Pod
 metadata:
