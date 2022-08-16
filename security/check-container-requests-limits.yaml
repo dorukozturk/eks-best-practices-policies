@@ -1,0 +1,31 @@
+# https://aws.github.io/aws-eks-best-practices/security/docs/pods/#set-requests-and-limits-for-each-container-to-avoid-resource-contention-and-dos-attacks
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: require-requests-limits   
+spec:
+  validationFailureAction: audit
+  background: true
+  rules:
+  - name: validate-resources
+    match:
+      resources:
+        kinds:
+        - Pod
+    exclude:
+      resources:
+        kinds:
+        - Pod
+        namespaces:
+        - kube-system
+    validate:
+      message: "CPU and memory resource requests and limits are required."
+      pattern:
+        spec:
+          containers:
+          - resources:
+              requests:
+                memory: "?*"
+                cpu: "?*"
+              limits:
+                memory: "?*"

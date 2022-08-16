@@ -13,6 +13,12 @@ spec:
         - resources:
             kinds:
               - Pod
+      exclude:
+        resources:
+          kinds:
+          - Pod
+          namespaces:
+          - kube-system
       validate:
         message: >-
                     HostPath volumes are forbidden. The field spec.volumes[*].hostPath must be unset.
