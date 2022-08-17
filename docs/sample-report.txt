@@ -1,0 +1,251 @@
+    Nanos:    0
+    Seconds:  1660736748
+  Message:    validation error: Root filesystem must be read-only. Rule validate-readOnlyRootFilesystem failed at path /spec/containers/0/securityContext/readOnlyRootFilesystem/
+  Policy:     require-ro-rootfs
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         root-user-test-pod
+    Namespace:    default
+    UID:          8ff23155-2c00-49d0-8ee7-b24bcaab5537
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736741
+  Message:    validation error: Using 'default' service account is not allowed. Rule disallow-default-service-account failed at path /spec/serviceAccountName/
+  Policy:     disallow-default-service-account
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         automount-service-pod
+    Namespace:    default
+    UID:          9e4c108e-8688-4248-a588-d4ff76e26f25
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736754
+  Message:    validation error: Auto-mounting of Service Account tokens is not allowed. Rule validate-automountServiceAccountToken failed at path /spec/automountServiceAccountToken/
+  Policy:     restrict-automount-sa-token
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         hostpath-pod
+    Namespace:    default
+    UID:          81157c34-d92b-488e-85f1-c52da8dd2fb7
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736753
+  Message:    validation error: Using 'default' service account is not allowed. Rule disallow-default-service-account failed at path /spec/serviceAccountName/
+  Policy:     disallow-default-service-account
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         root-user-test-pod
+    Namespace:    default
+    UID:          8ff23155-2c00-49d0-8ee7-b24bcaab5537
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736754
+  Message:    validation error: Auto-mounting of Service Account tokens is not allowed. Rule validate-automountServiceAccountToken failed at path /spec/automountServiceAccountToken/
+  Policy:     restrict-automount-sa-token
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         nginx
+    Namespace:    default
+    UID:          b16c31fb-98f6-4dfd-bb70-e5ba012458e3
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736759
+  Message:    validation error: Root filesystem must be read-only. Rule validate-readOnlyRootFilesystem failed at path /spec/containers/0/securityContext/readOnlyRootFilesystem/
+  Policy:     require-ro-rootfs
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         privilege-escalation-test-pod
+    Namespace:    default
+    UID:          75260494-8411-40fb-9173-ee846df59a66
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736759
+  Message:    validation error: Auto-mounting of Service Account tokens is not allowed. Rule validate-automountServiceAccountToken failed at path /spec/automountServiceAccountToken/
+  Policy:     restrict-automount-sa-token
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         privilege-escalation-test-pod
+    Namespace:    default
+    UID:          75260494-8411-40fb-9173-ee846df59a66
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736753
+  Message:    validation error: Using 'default' service account is not allowed. Rule disallow-default-service-account failed at path /spec/serviceAccountName/
+  Policy:     disallow-default-service-account
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         hostpath-pod
+    Namespace:    default
+    UID:          81157c34-d92b-488e-85f1-c52da8dd2fb7
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736759
+  Message:    validation error: Root filesystem must be read-only. Rule validate-readOnlyRootFilesystem failed at path /spec/containers/0/securityContext/
+  Policy:     require-ro-rootfs
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         automount-service-pod
+    Namespace:    default
+    UID:          9e4c108e-8688-4248-a588-d4ff76e26f25
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736759
+  Message:    validation error: Auto-mounting of Service Account tokens is not allowed. Rule validate-automountServiceAccountToken failed at path /spec/automountServiceAccountToken/
+  Policy:     restrict-automount-sa-token
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         automount-service-pod
+    Namespace:    default
+    UID:          9e4c108e-8688-4248-a588-d4ff76e26f25
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736753
+  Message:    validation error: Root filesystem must be read-only. Rule validate-readOnlyRootFilesystem failed at path /spec/containers/0/securityContext/
+  Policy:     require-ro-rootfs
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         hostpath-pod
+    Namespace:    default
+    UID:          81157c34-d92b-488e-85f1-c52da8dd2fb7
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736759
+  Message:    validation error: Using 'default' service account is not allowed. Rule disallow-default-service-account failed at path /spec/serviceAccountName/
+  Policy:     disallow-default-service-account
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         privilege-escalation-test-pod
+    Namespace:    default
+    UID:          75260494-8411-40fb-9173-ee846df59a66
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736748
+  Message:    validation error: Using 'default' service account is not allowed. Rule disallow-default-service-account failed at path /spec/serviceAccountName/
+  Policy:     disallow-default-service-account
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         nginx
+    Namespace:    default
+    UID:          b16c31fb-98f6-4dfd-bb70-e5ba012458e3
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736754
+  Message:    validation error: Auto-mounting of Service Account tokens is not allowed. Rule validate-automountServiceAccountToken failed at path /spec/automountServiceAccountToken/
+  Policy:     restrict-automount-sa-token
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         root-user-test-pod
+    Namespace:    default
+    UID:          8ff23155-2c00-49d0-8ee7-b24bcaab5537
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736759
+  Message:    validation error: Root filesystem must be read-only. Rule validate-readOnlyRootFilesystem failed at path /spec/containers/0/securityContext/
+  Policy:     require-ro-rootfs
+  Resources:
+    API Version:  v1
+    Kind:         Pod
+    Name:         nginx
+    Namespace:    default
+    UID:          b16c31fb-98f6-4dfd-bb70-e5ba012458e3
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736748
+  Message:    validation error: Root filesystem must be read-only. Rule autogen-validate-readOnlyRootFilesystem failed at path /spec/template/spec/containers/0/securityContext/readOnlyRootFilesystem/
+  Policy:     require-ro-rootfs
+  Resources:
+    API Version:  apps/v1
+    Kind:         DaemonSet
+    Name:         kube-proxy
+    Namespace:    kube-system
+    UID:          391efc33-af91-485e-bb20-7bb2feba7fa6
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736748
+  Message:    validation error: Auto-mounting of Service Account tokens is not allowed. Rule autogen-validate-automountServiceAccountToken failed at path /spec/template/spec/automountServiceAccountToken/
+  Policy:     restrict-automount-sa-token
+  Resources:
+    API Version:  apps/v1
+    Kind:         Deployment
+    Name:         coredns
+    Namespace:    kube-system
+    UID:          7797a006-4852-4975-81ee-cfc522b7c5f0
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736748
+  Message:    validation error: Auto-mounting of Service Account tokens is not allowed. Rule autogen-validate-automountServiceAccountToken failed at path /spec/template/spec/automountServiceAccountToken/
+  Policy:     restrict-automount-sa-token
+  Resources:
+    API Version:  apps/v1
+    Kind:         DaemonSet
+    Name:         aws-node
+    Namespace:    kube-system
+    UID:          bc3a9153-556c-4459-9e10-8d23c23e1337
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736756
+  Message:    validation error: Root filesystem must be read-only. Rule autogen-validate-readOnlyRootFilesystem failed at path /spec/template/spec/containers/0/securityContext/readOnlyRootFilesystem/
+  Policy:     require-ro-rootfs
+  Resources:
+    API Version:  apps/v1
+    Kind:         DaemonSet
+    Name:         aws-node
+    Namespace:    kube-system
+    UID:          bc3a9153-556c-4459-9e10-8d23c23e1337
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736742
+  Message:    validation error: Update the aws-node daemonset to use IRSA. Rule validate-node-daemonset-irsa failed at path /spec/serviceAccountName/
+  Policy:     aws-node-daemonset-irsa
+  Resources:
+    API Version:  apps/v1
+    Kind:         DaemonSet
+    Name:         aws-node
+    Namespace:    kube-system
+    UID:          bc3a9153-556c-4459-9e10-8d23c23e1337
+  Result:         fail
+--
+    Nanos:    0
+    Seconds:  1660736742
+  Message:    validation error: Auto-mounting of Service Account tokens is not allowed. Rule autogen-validate-automountServiceAccountToken failed at path /spec/template/spec/automountServiceAccountToken/
+  Policy:     restrict-automount-sa-token
+  Resources:
+    API Version:  apps/v1
+    Kind:         DaemonSet
+    Name:         kube-proxy
+    Namespace:    kube-system
+    UID:          391efc33-af91-485e-bb20-7bb2feba7fa6
+  Result:         fail

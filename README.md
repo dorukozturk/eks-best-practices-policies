@@ -32,3 +32,9 @@ Some sample test cases to trigger the fails:
 ```
 kubectl apply -f tests/
 ```
+
+See a sample report:
+
+```
+cat docs/sample-report.txt
+```
