@@ -38,3 +38,11 @@ See a sample report:
 ```
 cat docs/sample-report.txt
 ```
+
+# Additional Checks
+
+```
+python3 -m venv ./.venv
+pip install -r requirements.txt
+python check_best_practices.py us-east-1 eksctl-kyverno
+```
