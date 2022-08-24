@@ -46,6 +46,21 @@ def check_access_to_instance_profile(region: str, cluster: str):
             )
 
 
+def check_logs_are_enabled(region, cluster):
+    client = boto3.client("eks", region_name=region)
+    cluster_metadata = client.describe_cluster(name=cluster)
+    logs = cluster_metadata["cluster"]["logging"]["clusterLogging"][0][
+        "enabled"
+    ]
+
+    if not logs:
+        print(Fore.RED + "Enable control plane logs for auditing")
+        print(
+            Style.DIM
+            + "https://aws.github.io/aws-eks-best-practices/security/docs/detective/#enable-audit-logs"
+        )
+
+
 @click.command()
 @click.argument("region")
 @click.argument("cluster")
@@ -53,6 +68,7 @@ def check_eks_best_practices(region, cluster):
     init(autoreset=True)
     check_endpoint_public_access(region, cluster)
     check_access_to_instance_profile(region, cluster)
+    check_logs_are_enabled(region, cluster)
 
 
 if __name__ == "__main__":
